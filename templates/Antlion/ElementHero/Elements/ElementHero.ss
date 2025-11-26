@@ -1,6 +1,6 @@
 <%-- <% require themedCSS('hero') %> --%>
 <% require css('antlion/element-hero:client/css/hero.css') %>
-<div class="hero-section hero-{$Theme} hero-h-{$Height}" <% if $BackgroundImage %>style="background-image:url('{$BackgroundImage.FillMax(2000,1200).URL}');"<% end_if %>>
+<div class="hero-section hero-{$Theme} hero-h-{$Height}" <% if $BackgroundImage %>style="background-image:url('{$BackgroundImage.URL}');"<% end_if %>>
   <% if $OverlayOpacity %>
     <div class="hero-overlay" style="--hero-overlay: {$OverlayOpacityCss};"></div>
   <% else %>
@@ -14,8 +14,8 @@
               <{$Me} class="hero-title">$Up.Title.XML</{$Me}>
           <% end_with %>
       <% end_if %>
-      <% if $Subtitle %><p class="subtitle">$Subtitle.XML</p><% end_if %>
-      <% if $Content %><p class="blurb">$Content.XML</p><% end_if %>
+  
+      <% if $Content %>$Content<% end_if %>
 
       <% if $Links.Exists %>
         <div class="button-group {$HorizontalAlignClass}">
