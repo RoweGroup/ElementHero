@@ -7,8 +7,8 @@
     <div class="hero-overlay"></div>
   <% end_if %>
 
-  <div class="hero-inner grid-x  {$HorizontalAlignClass} {$VerticalAlignClass}">
-    <div class="cell large-shrink small-auto {$PaddingClass}">
+  <div class="hero-inner {$HorizontalAlignClass} {$VerticalAlignClass}">
+    <div class="{$PaddingClass}">
       <% if $Title && $ShowTitle %>
           <% with $HeadingTag %>
               <{$Me} class="hero-title">$Up.Title.XML</{$Me}>
