@@ -11,28 +11,29 @@
   background-color: #f7f7f7;
 }
 
+/* Overlay is only rendered when OverlayOpacity > 0.
+   OverlayStyle() sets either an rgba background-color (when OverlayColor is set)
+   or --hero-overlay for opacity-only mode using the theme default color. */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: var(--hero-overlay-bg, #000);
-  opacity: var(--hero-overlay, .35);
+  opacity: var(--hero-overlay, 1);
   z-index: 0;
 }
 
-.hero-inner{
+.hero-inner {
   position: relative;
   z-index: 1;
 }
 
 .hero-dark {
   --hero-overlay-bg: #000;
-  --hero-overlay: .45;
   color: #fff;
 }
 
 .hero-light {
   --hero-overlay-bg: #fff;
-  --hero-overlay: .25;
   color: #111;
 }
 
@@ -49,4 +50,3 @@
   .hero-h-medium { min-height: 60vh; }
   .hero-h-tall   { min-height: 80vh; }
 }
-
