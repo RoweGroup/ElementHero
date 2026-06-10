@@ -14,7 +14,7 @@
               <{$Me} class="hero-title">$Up.Title.XML</{$Me}>
           <% end_with %>
       <% end_if %>
-  
+
       <% if $Content %>$Content<% end_if %>
 
       <% if $Links.Exists %>
