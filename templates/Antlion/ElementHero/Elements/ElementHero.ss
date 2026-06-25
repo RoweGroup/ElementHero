@@ -1,6 +1,6 @@
 <%-- <% require themedCSS('hero') %> --%>
 <% require css('antlion/element-hero:client/css/hero.css') %>
-<div class="hero-section hero-{$Theme} hero-h-{$Height}"<% if $HeroStyle %> style="{$HeroStyle}"<% end_if %>>
+<div class="hero-section hero-{$Theme} hero-h-{$Height} <% if $ExtraClass %> $ExtraClass<% end_if %>"<% if $HeroStyle %> style="{$HeroStyle}"<% end_if %>>
 
   <% if $HasOverlay %>
     <div class="hero-overlay" style="{$OverlayStyle}"></div>
