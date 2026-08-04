@@ -256,4 +256,22 @@ class ElementHero extends BaseElement
             default => 'p-20',
         };
     }
+
+    /**
+     * Cache key for the front-end render: this element's own fields are all
+     * covered by LastEdited, but Links is a separate has_many relation that
+     * doesn't touch this row when a link is added, removed, or edited.
+     */
+    public function getCacheKey(): string
+    {
+        $links = $this->Links();
+
+        return md5(implode('|', [
+            $this->ID,
+            $this->LastEdited,
+            $links->count(),
+            implode('-', $links->column('ID')),
+            $links->max('LastEdited'),
+        ]));
+    }
 }

@@ -1,5 +1,6 @@
 <%-- <% require themedCSS('hero') %> --%>
 <% require css('antlion/element-hero:client/css/hero.css') %>
+<% cached $CacheKey %>
 <div class="hero-section hero-{$Theme} hero-h-{$Height} <% if $ExtraClass %> $ExtraClass<% end_if %>"<% if $HeroStyle %> style="{$HeroStyle}"<% end_if %>>
 
   <% if $HasOverlay %>
@@ -17,7 +18,7 @@
       <% if $Content %>$Content<% end_if %>
 
       <% if $Links.Exists %>
-        <div class="button-group {$HorizontalAlignClass}">
+        <div class="button-group stacked-for-small {$HorizontalAlignClass}">
           <% loop $Links %>
             <a class="button $CssClass" href="$URL"<% if $OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$Title.XML</a>
           <% end_loop %>
@@ -26,3 +27,4 @@
     </div>
   </div>
 </div>
+<% end_cached %>

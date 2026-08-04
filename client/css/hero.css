@@ -46,7 +46,7 @@
 
 /* Responsive tweaks */
 @media (max-width: 640px) {
-  .hero-h-short  { min-height: 40vh; }
-  .hero-h-medium { min-height: 60vh; }
-  .hero-h-tall   { min-height: 80vh; }
+  .hero-h-short  { min-height: auto; }
+  .hero-h-medium { min-height: 40vh; }
+  .hero-h-tall   { min-height: 40vh; }
 }
