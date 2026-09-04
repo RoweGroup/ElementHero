@@ -20,8 +20,8 @@
       <% if $Links.Exists %>
         <div class="button-group stacked-for-small {$HorizontalAlignClass}">
           <% loop $Links %>
-            <a class="button $CssClass" href="$URL"<% if $OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$Title.XML</a>
-          <% end_loop %>
+            <a class="button $CssClass" href="$URL" <% if $RemodalTarget %>data-remodal-target="$RemodalTarget"<% end_if %> <% if $OpenInNew %> target="_blank" rel="noopener noreferrer"<% end_if %>>$Title.XML</a>
+            <% end_loop %>
         </div>
       <% end_if %>
     </div>
